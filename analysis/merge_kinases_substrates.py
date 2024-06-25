@@ -30,4 +30,5 @@ if '_k' not in kinases.loc[0, 'Accession'].lower():
 
 all = pd.concat([kinases, phospho], axis=0)
 print(f'Phospho shape: {phospho.shape}\nKinase shape {kinases.shape}\nConcatenatedFinal: {all.shape}')
-all.to_csv(f'{os.path.dirname(AnnotatedKinaseSheet)}/KinSub{os.path.basename(AnnotatedKinaseSheet)}')
+all.to_csv(f'{os.path.dirname(AnnotatedKinaseSheet)}/KinSub{os.path.basename(AnnotatedKinaseSheet)}', index=False)
+
